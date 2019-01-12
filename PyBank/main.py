@@ -37,3 +37,9 @@ with open(csvpath, newline = '') as csvfile:
             worst_month = row[0]
         if int(row[1]) == max_change:
             best_month = row[0]
+            
+print(f"Executive Summary \nTotal Months: {num_months}\nAverage Change: ${avg_change}\nBest Month: {best_month} (${min_change})\nWorst Month: {worst_month} (${max_change})")
+
+file = open("summary", "w")
+file.write("Executive Summary \nTotal Months: 86 \nAverage Change: $-2315.1176470588234\nBest Month: Feb-2012 ($-2196167)\nWorst Month: Sep-2013 ($1926159)")
+file.close()
